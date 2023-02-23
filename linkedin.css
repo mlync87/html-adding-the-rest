@@ -1,0 +1,87 @@
+div {
+  border: 2px dotted rgb(79, 1, 1);
+  padding: 5px;
+}
+
+body {
+  place-items: center;
+}
+
+.container {
+  display: grid;
+  gap: 5px;
+}
+
+.innerContainer {
+  border-color: rgb(0, 0, 0);
+}
+.innerContainer2 {
+  border-color: rgb(255, 25, 0);
+}
+
+.finalContainer {
+  border-color: rgb(68, 0, 255);
+}
+
+.main-container {
+  grid-template:
+    "emptyTop top top top emptyTop2" 75px
+    "empty left center right empty2" 1fr /
+    1fr 2fr 2fr 2fr 1fr;
+  height: 900px;
+  gap: 10px;
+}
+
+#topBar {
+  background-color: lime;
+  grid-area: top;
+  grid-template-columns: 50px 1fr 1fr;
+}
+
+#leftSection {
+  background-color: yellowgreen;
+  grid-area: left;
+  grid-template-rows: 2fr 1fr 2fr;
+}
+
+#mainSection {
+  background-color: orange;
+  grid-area: center;
+  grid-template-rows: 100px 1fr;
+  gap: 15px;
+}
+
+#rightSection {
+  background-color: beige;
+  grid-area: right;
+  grid-template-rows: 2fr 1fr 2fr;
+}
+
+#searchBarArea {
+  grid-template-areas: "searchBar empty";
+  grid-template-columns: 1fr 1fr;
+}
+
+#searchBar {
+  grid-area: searchBar;
+}
+
+#topRight {
+  grid-template-columns: repeat(auto-fit, 50px);
+}
+
+#profileBox {
+  grid-template-rows: 3fr 1fr 1fr 1fr;
+}
+
+#post {
+  grid-template-columns: 25px 1fr;
+}
+
+#addFiles {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#feed {
+  grid-template-rows: 1fr 1fr 1fr;
+}
