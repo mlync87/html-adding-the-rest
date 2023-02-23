@@ -1,0 +1,110 @@
+div,
+p {
+  border: 2px dotted;
+  padding: 2px;
+}
+
+p {
+  margin: 1px;
+}
+
+.container {
+  display: grid;
+  gap: 0px;
+}
+
+.main-container {
+  grid-template-columns: 60px 180px 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "server-menu rooms-list main";
+  height: 800px;
+}
+
+.server-menu {
+  background-color: lightblue;
+  grid-template-rows: 50px 1fr;
+}
+
+.rooms-list {
+  background-color: lime;
+  grid-template-rows: 50px 150px 1fr 25px;
+}
+
+.main {
+  background-color: yellow;
+  grid-template-rows: 50px 1fr;
+}
+
+.top-row {
+  grid-template-columns: 1fr 40px 40px 40px 120px 40px 40px;
+}
+
+.main-row {
+  grid-template-rows: 1fr 50px;
+}
+
+.server-list {
+  grid-template-rows: repeat(auto-fit, 50px);
+  gap: 0px;
+  padding: 0px;
+}
+
+#addServerIcon,
+#discoverIcon,
+#downloadIcon {
+  margin-top: 5px;
+}
+
+.server-name {
+  grid-template-columns: 1fr 25px;
+}
+
+.invite {
+  grid-template:
+    "empty banner cross" 15px
+    "empty banner empty2" 1fr/
+    20px 1fr 20px;
+}
+
+#inviteBanner {
+  grid-area: banner;
+}
+
+#cross {
+  grid-area: cross;
+}
+
+.rooms {
+  grid-template-rows: 100px 200px 120px 100px;
+  gap: 10px;
+}
+
+.category {
+  grid-template-rows: repeat(auto-fit, 25px);
+}
+
+.categoryHeader {
+  grid-template-columns: 1fr 25px;
+}
+
+.room {
+  grid-template-columns: 25px 1fr;
+}
+
+.addRoom {
+  margin: 0px;
+  padding: 0px;
+  height: 10px;
+}
+
+.profile-widget {
+  grid-template-columns: 25px 1fr 15px 15px 15px;
+}
+
+.chat-bar {
+  grid-template-columns: 25px 1fr 25px 25px 25px;
+}
+
+.chat-history {
+  grid-template-rows: 1fr 50px 50px 25px 25px 50px;
+}
